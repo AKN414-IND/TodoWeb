@@ -1,0 +1,138 @@
+:root {
+    --primary-color: #f5f7fa;
+    --second-color: #cce5ff;
+    --accent-color: #0077ff;
+    --text-color: #1a1a1a;
+    --border-color: #99c2ff;
+    --card-bg: #ffffff;
+}
+
+body {
+    padding: 10px;
+}
+
+h1 {
+    text-align: center;
+    color: var(--accent-color);
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+}
+
+h4 {
+    text-align: center;
+    color: var(--text-color);
+    font-weight: bold;
+
+}
+
+.inputContainer {
+    border: 1px solid var(--border-color);
+    padding: 15px;
+    border-radius: 10px;
+    background-color: var(--primary-color);
+    display: flex;
+    flex-direction: column;
+}
+
+.inputContainer input,
+.inputContainer select,
+.inputContainer textarea,
+.inputContainer button {
+    margin-top: 10px;
+    padding: 10px;
+    font-size: 15px;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+}
+
+.inputContainer button {
+    background-color: var(--accent-color);
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.inputContainer button:hover {
+    background-color: #0056cc;
+}
+
+.todoList {
+    margin-top: 20px;
+    list-style: none;
+    padding: 0;
+}
+
+.completedList{
+    margin-top: 20px;
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid var(--border-color);
+    background-color: var(--primary-color);
+    padding: 10px 12px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+li:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+li.completed span {
+    text-decoration: line-through;
+    color: gray;
+}
+
+.todoList li {
+    transition: all 0.2s ease;
+}
+
+.todoList li:hover {
+    background-color: var(--second-color);
+    transform: scale(1.02);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    cursor: pointer;
+}
+
+.todoList li:hover .level {
+    color: var(--accent-color);
+    font-weight: bold;
+}
+
+.delete {
+    border: none;
+    background-color: var(--accent-color);
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 6px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.delete:hover {
+    background-color: #004bb5;
+}
+
+.level {
+    font-size: 0.85em;
+    color: #444;
+}
+
+.invisible {
+    display: none;
+
+}
+
+.box {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
